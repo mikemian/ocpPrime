@@ -100,33 +100,37 @@ nodeInfo["attributes"]["memTotal"] = 0
 for dim in nodeInfo["components"]["memory"]:
     nodeInfo["attributes"]["memTotal"] = nodeInfo["attributes"]["memTotal"] + dim["size"]
 nodeInfo["attributes"]["memTotal"] = nodeInfo["attributes"]["memTotal"] / 1024
+
 # Storage Controller Info
-nodeInfo["components"]["storageController"] = {}
-storageStr = commands.getoutput("lspci -v | egrep -A1 'RAID bus|IDE interface|SATA controller'")
-nodeInfo["components"]["storageController"]["pciID"] = storageStr.splitlines()[0].split(" ")[0]
-nodeInfo["components"]["storageController"]["oPlatform"] = storageStr.splitlines()[0].split(": ")[1].strip()
-nodeInfo["components"]["storageController"]["platform"] = storageStr.splitlines()[1].split(": ")[1].strip()
+nodeInfo["components"]["storageController"] = []
+storageInfo = commands.getoutput("lspci -v | egrep -A1 'RAID bus|IDE interface|SATA controller' | grep -v '\-\-'")
+for num, line in enumerate(storageInfo, 1):
+    controller = {}
+    if num % 2 == 0:
+        controller["pciID"] = line.split(" ")[0]
+        controller["oPlatform"] = line.split(": ")[1].strip()
+    if not num % 2 == 0:
+        controller["platform"] = line.split(": ")[1].strip()
+    # MegaRAID Controller Info
+    if controller["oPlatform"].find("MegaRAID") > -1:
+        stdout = Popen("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog", shell=True, stdout=PIPE).stdout
+        stdout.read() 
+        if int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -LDInfo -Lall -aALL | grep Name | wc -l")) > 0:
+            nodeInfo["attributes"]["isRAID"] = 1
+        controller["vendor"] = "LSI"
+        controller["firmware"] = commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog | grep 'FW Package Build' | awk '{print $4}'")
+        controller["bbu"] = commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'BBU' | head -n1 | awk '{print $3}'")
+        controller["cache"] = commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'Memory Size' | awk '{print $4}'")
+        controller["tDisks"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog | grep 'Disks' | sed -n '1p' | awk '{print $3}'"))
+        controller["cDisks"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'Disks' | sed -n '2p' | awk '{print $4}'"))
+        controller["fDisks"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'Disks' | sed -n '3p' | awk '{print $4}'"))
+        controller["eID"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -EncInfo -aALL -NoLog| grep 'Device ID' | awk '{print $4}'"))
+        controller["eSlots"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -EncInfo -aALL -NoLog| grep 'Number of Slots' | awk '{print $5}'"))
 
 # RAID Info
 nodeInfo["attributes"]["isRAID"] = False
 if not commands.getoutput("cat /proc/mdstat | grep md | wc -l") == "0":
     nodeInfo["attributes"]["isRAID"] = 1
-
-# MegaRAID Controller Info
-if nodeInfo["components"]["storageController"]["oPlatform"].find("MegaRAID") > -1:
-    stdout = Popen("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog", shell=True, stdout=PIPE).stdout
-    stdout.read() 
-    if int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -LDInfo -Lall -aALL | grep Name | wc -l")) > 0:
-        nodeInfo["attributes"]["isRAID"] = 1
-    nodeInfo["components"]["storageController"]["vendor"] = "LSI"
-    nodeInfo["components"]["storageController"]["firmware"] = commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog | grep 'FW Package Build' | awk '{print $4}'")
-    nodeInfo["components"]["storageController"]["bbu"] = commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'BBU' | head -n1 | awk '{print $3}'")
-    nodeInfo["components"]["storageController"]["cache"] = commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'Memory Size' | awk '{print $4}'")
-    nodeInfo["components"]["storageController"]["tDisks"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog | grep 'Disks' | sed -n '1p' | awk '{print $3}'"))
-    nodeInfo["components"]["storageController"]["cDisks"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'Disks' | sed -n '2p' | awk '{print $4}'"))
-    nodeInfo["components"]["storageController"]["fDisks"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -AdpAllInfo -aALL -NoLog| grep 'Disks' | sed -n '3p' | awk '{print $4}'"))
-    nodeInfo["components"]["storageController"]["eID"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -EncInfo -aALL -NoLog| grep 'Device ID' | awk '{print $4}'"))
-    nodeInfo["components"]["storageController"]["eSlots"] = int(commands.getoutput("/opt/MegaRAID/MegaCli/MegaCli64 -EncInfo -aALL -NoLog| grep 'Number of Slots' | awk '{print $5}'"))
 
 # Physical Disks Array
 nodeInfo["components"]["pDisks"] = []
