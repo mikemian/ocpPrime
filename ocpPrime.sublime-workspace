@@ -1,0 +1,734 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"dellRacCra",
+				"dellRacCrabWrite(set)	(global, function)"
+			],
+			[
+				"dellRacCr",
+				"dellRacCrabWrite(set)	(global, function)"
+			],
+			[
+				"dellRac",
+				"dellRacFlowControlWrite(set)	(global, function)"
+			],
+			[
+				"dellRacSer",
+				"dellRacSerialModeWrite(set)	(global, function)"
+			],
+			[
+				"dellBoot",
+				"dellBootOrderWrite(set)	(global, function)"
+			],
+			[
+				"dellBoo",
+				"dellBootOrderWrite(set)	(global, function)"
+			],
+			[
+				"dellBo",
+				"dellBootWaitForF1IfErrorWrite(set)	(global, function)"
+			],
+			[
+				"dellPc",
+				"dellPciNic2OptionRomWrite(set)	(global, function)"
+			],
+			[
+				"dellPci",
+				"dellPciNic1OptionRomWrite(set)	(global, function)"
+			],
+			[
+				"en",
+				"enable"
+			],
+			[
+				"dellUs",
+				"dellUsbPortsWrite(set)	(global, function)"
+			],
+			[
+				"dellDisk",
+				"dellDiskSata1Write(set)	(global, function)"
+			],
+			[
+				"comp",
+				"compatibale"
+			],
+			[
+				"dellDi",
+				"dellDiskSata1Write(set)	(global, function)"
+			],
+			[
+				"dellD",
+				"dellDiskSata1Write(set)	(global, function)"
+			],
+			[
+				"dellDis",
+				"dellDiskSata0Write(set)	(global, function)"
+			],
+			[
+				"dellMem",
+				"dellMemInterleavingWrite(set)	(global, function)"
+			],
+			[
+				"opt",
+				"optimized"
+			],
+			[
+				"dellPowerR",
+				"dellPowerRestoreOnLossWrite(set)	(global, function)"
+			],
+			[
+				"op",
+				"optimized"
+			],
+			[
+				"dellPow",
+				"dellPowerProfileWrite(set)	(global, function)"
+			],
+			[
+				"dellCpuC",
+				"dellCpuCstateWrite(set)	(global, function)"
+			],
+			[
+				"dellC",
+				"dellCpuThrottleWrite(set)	(global, function)"
+			],
+			[
+				"dellCp",
+				"dellCpuTruboWrite(set)	(global, function)"
+			],
+			[
+				"dellCpu",
+				"dellCpuTruboWrite(set)	(global, function)"
+			],
+			[
+				"dellCpuE",
+				"dellCpuEdbWrite"
+			],
+			[
+				"mi",
+				"mirror"
+			],
+			[
+				"ma",
+				"maxperformance"
+			],
+			[
+				"com1",
+				"com1"
+			],
+			[
+				"dellRa",
+				"dellRacSerialModeRead	(global, function)"
+			],
+			[
+				"dellR",
+				"dellRacSerialPortNumberRead	(global, function)"
+			],
+			[
+				"dellP",
+				"dellPciNic2OptionRomRead	(global, function)"
+			],
+			[
+				"dellMe",
+				"dellMemModeRead	(global, function)"
+			],
+			[
+				"dell",
+				"dellBootOrderRead"
+			],
+			[
+				"Con",
+				"Console"
+			],
+			[
+				"inte",
+				"interleaving"
+			],
+			[
+				"val",
+				"val	(global, instance)"
+			],
+			[
+				"set",
+				"setting	(global, instance)"
+			],
+			[
+				"mem",
+				"memDict	(global, instance)"
+			],
+			[
+				"nplo",
+				"nplogFile	(global, instance)"
+			],
+			[
+				"np",
+				"nplogFile	(global, instance)"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"node",
+				"nodeEvents	(global, instance)"
+			],
+			[
+				"line",
+				"lineAr	(global, instance)"
+			],
+			[
+				"spl",
+				"split"
+			],
+			[
+				"vt",
+				"vt_utf8"
+			],
+			[
+				"cl",
+				"close	(builtin, function)"
+			],
+			[
+				"de",
+				"devRXUtilization	(global, instance)"
+			],
+			[
+				"proc",
+				"procNetDevFile	(global, instance)"
+			],
+			[
+				"re",
+				"read	(builtin, function)"
+			],
+			[
+				"_net",
+				"_netDevs	(global, instance)"
+			],
+			[
+				"dev",
+				"devTXUtilization	(global, instance)"
+			],
+			[
+				"pro",
+				"procNetDev"
+			],
+			[
+				"disk",
+				"diskDF	(global, instance)"
+			],
+			[
+				"memIn",
+				"memInfoMetrics	(global, instance)"
+			],
+			[
+				"cpu",
+				"cpuUtilization	(global, instance)"
+			],
+			[
+				"mT",
+				"mTimestamp	(global, instance)"
+			],
+			[
+				"time",
+				"timestamp"
+			],
+			[
+				"in",
+				"interrupts	(local, instance)"
+			],
+			[
+				"iowai",
+				"iowait"
+			],
+			[
+				"cre",
+				"create_conf"
+			],
+			[
+				"DB",
+				"DB_SERVER"
+			],
+			[
+				"couchbase",
+				"couchbase-server"
+			],
+			[
+				"get",
+				"getVen(oui)	(global, function)"
+			],
+			[
+				"uptime",
+				"uptimeDict	(global, instance)"
+			],
+			[
+				"JSON",
+				"JSONEncoder	(imported, class)"
+			],
+			[
+				"sen",
+				"sensorDict	(global, instance)"
+			],
+			[
+				"ra",
+				"reading"
+			],
+			[
+				"even",
+				"eventLine	(global, instance)"
+			],
+			[
+				"date",
+				"dateAr	(global, instance)"
+			],
+			[
+				"event",
+				"eventAr	(global, instance)"
+			],
+			[
+				"eve",
+				"eventAr	(global, instance)"
+			],
+			[
+				"me",
+				"memory"
+			],
+			[
+				"com",
+				"components"
+			],
+			[
+				"a",
+				"attributes"
+			],
+			[
+				"pac",
+				"package"
+			],
+			[
+				"pack",
+				"packages"
+			],
+			[
+				"split",
+				"splitlines"
+			],
+			[
+				"proce",
+				"Processor"
+			],
+			[
+				"release",
+				"release"
+			],
+			[
+				"spli",
+				"splitlines"
+			],
+			[
+				"sp",
+				"splitlines"
+			],
+			[
+				"plat",
+				"platform"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 673,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Add Repository"
+			],
+			[
+				"gog",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/nater/Documents/workspace/protege/metrics/bmc.py",
+		"/Users/nater/Documents/workspace/protege/metrics/raid.py",
+		"/Users/nater/Documents/workspace/protege/metrics/raid.json",
+		"/Users/nater/Documents/workspace/protege/metrics/bmc.json",
+		"/Users/nater/Documents/workspace/protege/metrics/bios.json",
+		"/Users/nater/Documents/notes/mount_hdfs",
+		"/Users/nater/Documents/notes/elasticsearch",
+		"/Users/nater/Documents/workspace/protege/metrics/bios.py",
+		"/Users/nater/Desktop/30303030-3030-4A59-3132-395034303533-984BE10065F4.json",
+		"/Users/nater/Documents/pythonBlank.py",
+		"/Users/nater/Documents/notes/meetups_bio",
+		"/Users/nater/Documents/workspace/protege/.travis.yml",
+		"/Users/nater/Documents/notes/hp linux tools repo",
+		"/Users/nater/Documents/notes/Centos 6 IPMI kernel module",
+		"/Users/nater/Documents/workspace/protege/metrics/nodeInfo.py",
+		"/Users/nater/Documents/workspace/managementSpec/samples/raid.json",
+		"/Users/nater/Documents/workspace/managementSpec/samples/firmware.json",
+		"/Users/nater/Documents/workspace/managementSpec/bios.json",
+		"/Users/nater/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/nater/Documents/workspace/protege/package.json",
+		"/Users/nater/Documents/workspace/protege/nodeprime/sensors.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/uptime.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/net.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/disk.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/mem.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/cpu.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/raid.py",
+		"/Users/nater/Desktop/elasticsearch",
+		"/Users/nater/Documents/workspace/managementSpec/samples/bios.json",
+		"/Users/nater/Desktop/login.html",
+		"/Users/nater/Downloads/server-locked.ovpn",
+		"/Users/nater/Documents/workspace/installScripts/nodeprime.sql",
+		"/Users/nater/Documents/workspace/installScripts/installSearch.sh",
+		"/Users/nater/Documents/workspace/installScripts/installProxy.sh",
+		"/Users/nater/Documents/workspace/installScripts/installGUI.sh",
+		"/Users/nater/Documents/workspace/installScripts/installPXEDHCP.sh",
+		"/Users/nater/Documents/workspace/installScripts/installDB.sh",
+		"/Users/nater/seed_data.py",
+		"/Users/nater/Documents/mac_service.py",
+		"/Users/nater/Documents/workspace/protege/bootstrap.sh",
+		"/Users/nater/Documents/workspace/macService/do.py",
+		"/Users/nater/Documents/workspace/macService/ipmiInfo.py",
+		"/Users/nater/Documents/workspace/protege-old/nodeprime/procList.py",
+		"/Users/nater/Documents/workspace/protege-old/nodeprime/uptime.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/nodeInfo.py",
+		"/Users/nater/Documents/join.couch.cluster",
+		"/Users/nater/Documents/workspace/protege/nodeprime/elastic-init",
+		"/Users/nater/Documents/workspace/protege/controllers/authenticate.js",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/controllers/ensureAuthenticatedCtrl.js",
+		"/Users/nater/Documents/workspace/cool/app.js",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/package.json",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/views/login.ejs",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/views/account.ejs",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/views/index.ejs",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/controllers/authCtrl.js",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/controllers/routesCtrl.js",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/app.js",
+		"/Users/nater/Documents/workspace/my.nodeprime.net/config/config.js",
+		"/Users/nater/Documents/workspace/cool/config/config.js",
+		"/Users/nater/Documents/workspace/cool/controllers/auth.js",
+		"/Users/nater/Documents/workspace/cool/controllers/routes.js",
+		"/Users/nater/Documents/ec2-commands.txt",
+		"/Users/nater/Documents/workspace/cool/views/index.ejs",
+		"/Users/nater/Documents/workspace/cool/public/js/app.js",
+		"/Users/nater/Documents/workspace/cool/public/css/style.css",
+		"/Users/nater/Documents/workspace/cool/public/js/controllers.js",
+		"/Users/nater/Documents/workspace/cool/public/partials/dashboard.html",
+		"/Users/nater/Documents/workspace/cool/routes/index.js",
+		"/Users/nater/Documents/workspace/cool/models/user.js",
+		"/Users/nater/Documents/workspace/cool/utils/accountUtil.js",
+		"/Users/nater/Documents/workspace/cool/utils/authorizationUtil.js",
+		"/Users/nater/Documents/workspace/cool/utils/errors.js",
+		"/Users/nater/Documents/workspace/cool/utils/passportUtil.js",
+		"/Users/nater/Documents/workspace/cool/models/loginToken.js",
+		"/Users/nater/Documents/workspace/cool/utils/mailerUtil.js",
+		"/Users/nater/Documents/workspace/cool/apis/accountService.js",
+		"/Users/nater/Documents/workspace/cool/config/errors.js",
+		"/Users/nater/Documents/workspace/cool/package.json",
+		"/Users/nater/Documents/workspace/cool/routes/user.js",
+		"/Users/nater/Documents/workspace/cool/routes/api.js",
+		"/Users/nater/Documents/workspace/cool/public/partials/search.html",
+		"/Users/nater/Documents/workspace/protege/nodeprime/events.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/dmiBaseboard.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/dmi.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/environmentals.py",
+		"/Users/nater/Documents/workspace/protege/nodeprime/alerts.py",
+		"/Users/nater/Documents/workspace/node-sigar/node-sigar.js",
+		"/Users/nater/Documents/workspace/cool/public/partials/results.html",
+		"/Users/nater/createCouchUser.sh",
+		"/Users/nater/Documents/add_nodes_to_bigcouch_cluster",
+		"/Users/nater/Library/Application Support/Sublime Text 2/Packages/User/test.js",
+		"/Users/nater/Library/Application Support/Sublime Text 2/Packages/User/test.sh"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"360",
+			"6665",
+			"\")",
+			" :",
+			"\"read\" : dellBin",
+			"cstates",
+			"\"--",
+			"cstates",
+			"bios",
+			"disabled",
+			"enabled",
+			"false",
+			"true",
+			"                    ",
+			"nodeprime",
+			"((",
+			"]))\n",
+			"disk",
+			"Disk",
+			"disk",
+			"Disk",
+			"disk",
+			"Disk",
+			"disk",
+			"Disk",
+			"disk",
+			"Disk",
+			"disk",
+			"Disk",
+			"disk",
+			"split",
+			"d",
+			"(\"\\",
+			"number",
+			"utilization",
+			"cpu",
+			"readsIssued",
+			"Field",
+			"mem",
+			"Mem",
+			"mem",
+			"Mem",
+			"mem",
+			"Mem",
+			"mem",
+			"Mem",
+			"mem",
+			"Mem",
+			"mem",
+			"def",
+			"user",
+			" ,",
+			",\n",
+			" ,",
+			"`",
+			"TABLE",
+			"`np`.",
+			"·      ",
+			"JODE",
+			"arch",
+			"UUID",
+			"TO DO",
+			"TO",
+			"&gt;",
+			"open",
+			"9eee38236f3bf28406920213d93981a3",
+			"password1",
+			"Administrator",
+			"my_db",
+			"nodeprime",
+			"procDict",
+			"localhost",
+			"eventDict",
+			"eventAr",
+			"eventLine",
+			"event",
+			"nodeEvents",
+			"mTotal",
+			"bmc",
+			"pDisks",
+			"pdisks",
+			"lshw",
+			"oModel",
+			"oemModel",
+			"enclosureDeviceID",
+			"totalDisks",
+			"oemModel",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"Manufacturer",
+			"manufacturer",
+			"div",
+			"\n</div>\n\n<div>\n\n</div>",
+			"i"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\"read\" : commands.getoutput(dellBin",
+			"disable",
+			"enable",
+			",",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 673,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"2",
+				"/Users/nater/Library/Application Support/Sublime Text 2/Packages/User/test.sh"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 260.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,84 @@
+#!/bin/bash
+#
+# /etc/rc.d/init.d/ocp-agent
+# ocp-agent     This shell script takes care of starting and stopping
+#                   ocp-agent (the OCP Agent)
+#
+# Author: Nathan Rockhold - nate@nodeprime.com
+#
+# chkconfig: 2345 13 87
+# description: ocp-agent is the OCP Agent for the disposable OS
+
+### BEGIN INIT INFO
+# Provides:          ocp-agent
+# Required-Start:    $network
+# Required-Stop:     $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start ocp-agent daemon
+# Description:       ocp-agent is the OCP Agent for the disposable OS
+### END INIT INFO
+
+# Source function library.
+. /etc/init.d/functions
+
+aas_HOST=`hostname`
+aas_DIR=/opt/nodeprime/aas
+PIDFILE=$aas_DIR/pid
+NOHUP=`which nohup`
+
+# Include additional configuration options
+if [ -f /etc/sysconfig/ocp-agent ]; then
+    . /etc/sysconfig/ocp-agent
+fi
+
+
+start() {
+    echo -n "Starting OCP Agent: "
+    if [ -f $PIDFILE ]; then
+        PID=`cat $PIDFILE`
+        echo ocp-agent already running: $PID
+        exit 2;
+    else
+        cd $aas_DIR
+        $NOHUP ./bin/node/bin/node app.js $OPTIONS > /dev/null 2>&1&
+	echo $! > $PIDFILE
+        echo [ OK ]
+        touch /var/lock/subsys/ocp-agent
+        return 0
+    fi
+
+}
+
+stopping() {
+    echo -n "Shutting down OCP Agent: "
+    if [ -f $PIDFILE ]; then
+	PID=`cat $PIDFILE`
+	echo [OK]
+	kill -9 $PID
+    	rm -f $PIDFILE
+    fi
+    rm -f /var/lock/subsys/ocp-agent
+    return 0
+}
+
+case "$1" in
+    start)
+        start
+    ;;
+    stop)
+        stopping
+    ;;
+    status)
+        status ocp-agent
+    ;;
+    restart)
+        stopping
+        start
+    ;;
+    *)
+        echo "Usage:  {start|stop|status|restart}"
+        exit 1
+    ;;
+esac
+exit $?
