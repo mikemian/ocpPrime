@@ -46,8 +46,8 @@ nodeInfo["attributes"]["UUID"] = commands.getoutput("echo $(dmidecode -t 1 | gre
 nodeInfo["attributes"]["vendor"] =  ""
 if dmidecode.type(1)[dmidecode.type(1).keys()[0]]["data"]["Manufacturer"].find("Quanta") > -1:
     nodeInfo["attributes"]["vendor"] = "Quanta"
-elif dmidecode.type(1)[dmidecode.type(1).keys()[0]]["data"]["Manufacturer"].find("Supermicro") > -1:
-    nodeInfo["attributes"]["vendor"] = "Supermicro"
+elif dmidecode.type(1)[dmidecode.type(1).keys()[0]]["data"]["Manufacturer"].find("Tyan") > -1:
+    nodeInfo["attributes"]["vendor"] = "Tyan"
 nodeInfo["attributes"]["platform"] = dmidecode.type(1)[dmidecode.type(1).keys()[0]]["data"]["Product Name"]
 nodeInfo["attributes"]["serial"] = dmidecode.type(1)[dmidecode.type(1).keys()[0]]["data"]["Serial Number"]
 nodeInfo["attributes"]["cVendor"] = dmidecode.type(3)[dmidecode.type(3).keys()[0]]["data"]["Manufacturer"]
